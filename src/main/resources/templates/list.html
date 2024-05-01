@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+
+    <div th:if="${users.isEmpty()}" th:text="${'No tiene elementos usuarios'}"></div>
+
+    <table th:if="${not users.isEmpty()}">
+        <!--Cabecera de la tabla-->
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>lastName</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <!--Cuerpo de la tabla-->
+        <tbody>
+            <tr th:each="user: ${users}">
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.lastName}"></td>
+                <td th:if="${user.email}" th:text="${user.email}"></td>
+                <!--Otra manera de usar la expresion de if-->
+                <!--<td th:if="${not (user.email!=null)}" th:text="${'N/A'}"></td>-->
+                <td th:if="${user.email==null}" th:text="${'N/A'}"></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
