@@ -4,4 +4,4 @@ information, I worked with @ModelAttribute, @RequestParam, HttpServetRequest, @P
 API Rest send a json as POST request, @Value, Encoding, SpringExpressionLanguage(SpEL),
 Map SpEL with @Value, Enviroment for read settings, difference between redirect and foward as 
 an anwser to MethodController, and deploy from terminal. Finally, I decided to deploy in an instance
-of Oracle Cloud
+of Oracle Cloud. I used Postman for check my request to my API
