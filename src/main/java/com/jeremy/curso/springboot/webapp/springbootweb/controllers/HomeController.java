@@ -20,7 +20,7 @@ public class HomeController {
          * teniamos antes de
          * redirect
          */
-        return "redirect:/list";
+        return "redirect:/details";
         // return "foward:/list";
 
     }

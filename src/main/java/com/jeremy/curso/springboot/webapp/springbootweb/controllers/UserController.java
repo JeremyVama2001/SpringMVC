@@ -32,7 +32,7 @@ public class UserController {
     public String details(Model model) {
         User user = new User("Jeremy", "Valencia");
         user.setEmail("jeremyvalencia@gmail.com");
-        model.addAttribute("title", "Hola mundo Sping boot");
+        model.addAttribute("title", "Hola mundo Spring boot");
         model.addAttribute("user", user);
 
         // Regresa la plantilla
